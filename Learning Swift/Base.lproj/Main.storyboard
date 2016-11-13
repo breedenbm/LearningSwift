@@ -28,30 +28,48 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1p-RI-fyj">
-                                <rect key="frame" x="57" y="93" width="60" height="30"/>
+                                <rect key="frame" x="157" y="99" width="60" height="30"/>
                                 <state key="normal" title="Push Me"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lT3-nL-Fth"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mx-Or-X33">
-                                <rect key="frame" x="151" y="213" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Push Me 2"/>
-                                <connections>
-                                    <action selector="button2Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CRn-7Z-GC9"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hIY-kz-Eu8">
+                                <rect key="frame" x="143" y="304" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="hv8-jZ-9sT"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wty-ny-Ahc">
+                                <rect key="frame" x="143" y="228" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="lec-TP-cRk"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="L1p-RI-fyj" firstAttribute="top" secondItem="eu3-3h-f5T" secondAttribute="bottom" constant="35" id="5Bg-Hk-KGm"/>
+                            <constraint firstItem="Wty-ny-Ahc" firstAttribute="top" secondItem="L1p-RI-fyj" secondAttribute="bottom" constant="100" id="Guy-Vu-6Tc"/>
                             <constraint firstItem="L1p-RI-fyj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oc3-lf-o91"/>
+                            <constraint firstItem="hIY-kz-Eu8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UDl-C0-2kU"/>
+                            <constraint firstItem="hIY-kz-Eu8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XAx-Db-7A4"/>
                             <constraint firstItem="eu3-3h-f5T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cu2-Bi-7Me"/>
+                            <constraint firstItem="Wty-ny-Ahc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f2X-rb-YIU"/>
+                            <constraint firstItem="hIY-kz-Eu8" firstAttribute="top" secondItem="Wty-ny-Ahc" secondAttribute="bottom" constant="100" id="hjt-EN-1E9"/>
+                            <constraint firstItem="Wty-ny-Ahc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vAA-mH-DIO"/>
                             <constraint firstItem="eu3-3h-f5T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="yty-qO-IVU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="Wty-ny-Ahc" id="0l5-Do-knG"/>
+                        <outlet property="text2" destination="hIY-kz-Eu8" id="kzF-8f-Lyo"/>
                         <outlet property="theLabel" destination="eu3-3h-f5T" id="7kI-vk-4Ga"/>
                     </connections>
                 </viewController>
